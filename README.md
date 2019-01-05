@@ -45,8 +45,10 @@ TIP: to find user IDs and other JSON information, forward messages to @JsonDumpB
 
 `boolean sendMessage(long id, String message, String[][] keyboard, boolean resize, boolean oneTime)` - Sends a message, but gives the messaged user a keyboard prompt with buttons to send as a response.
 Keyboard Format: a 2D string array, row-major. e.g. new String[][]{{"a","b"},{"c","d"}} will result in a grid keyboard layout like:
-a | b
-c | d
+```
+a b
+c d
+```
 If the resize boolean is true, it will adjust the keyboard to fit the user's screen. If the oneTime boolean is true, the keyboard will be hidden from view after a button is pressed (but it will not be removed completely, use sendMessageRemoveKeyboard)  
 (if resize and oneTime are not specified, they default to true and false respectively)
 
